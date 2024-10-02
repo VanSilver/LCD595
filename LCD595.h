@@ -1,9 +1,9 @@
 /*
-*   Designed by VanSilver
-*   Contact:
-*   https://www.youtube.com/@vansilver1711
-*   https://facebook.com/VanSilver.ytb
-*/
+ *   Designed by VanSilver
+ *   Contact:
+ *   https://www.youtube.com/@vansilver1711
+ *   https://facebook.com/VanSilver.ytb
+ */
 
 #ifndef Arduino_LCD595_h
 #define Arduino_LCD595_h
@@ -77,23 +77,22 @@ public:
     void BacklightOn(void);
     void BacklightOff(void);
     virtual size_t write(uint8_t);
+    void command(uint8_t);
 
-    // void In_so(unsigned long val, char dec, unsigned char neg); // In_so(so,vi tri dau phay, 0= "+" or 1= "-"
-    // void In_chuoi(const char *);
-    // void Doi_float(char *string, int a, int b);                 // Bien doi so thuc float sang chuoi den in len LCD
     // void LCD_2line(const char *s1, const char *s2);             // in 2 hang
     // void LCD_Int2str(int i, char *sring);                       // Convert Interger to String Max =99999
 private:
+    void sendByte(uint8_t);
     void hc595_sendByte(uint8_t);
-    void hc595_spiSendByte();
+    void hc595_spiSendByte(uint8_t);
     void hc595_writeData(uint8_t);
     void hc595_writeCommand(uint8_t);
 
     uint8_t _backlightVal;
-    uint8_t _rs_pin;     // LOW: command.  HIGH: character.
-    uint8_t _rw_pin;     // LOW: write to LCD.  HIGH: read from LCD.
-    uint8_t _enable_pin; // activated by a HIGH pulse.
+    uint8_t _enable_pin;
     uint8_t _data_pins[8];
+    uint8_t _latchPin;
+    bool _usingSpi;
 };
 
 #endif
