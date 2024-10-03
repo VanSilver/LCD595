@@ -66,16 +66,16 @@ public:
     void begin(uint8_t cols, uint8_t rows);
 
     void home();
-    void Clear(void);
+    void clear(void);
     void setCursor(uint8_t _col, uint8_t _row);
 
     void scrollDisplayLeft(const char *s1, const char *s2);  // dich trai
     void scrollDisplayRight(const char *s1, const char *s2); // dich phai
-    void CustomChar(unsigned char vt, unsigned char *mgs);
-    void PrintCustomChar(uint8_t m);
+    void customChar(unsigned char vt, unsigned char *mgs);
+    void printCustomChar(uint8_t m);
 
-    void BacklightOn(void);
-    void BacklightOff(void);
+    void backlightOn(void);
+    void backlightOff(void);
     virtual size_t write(uint8_t);
     void command(uint8_t);
 

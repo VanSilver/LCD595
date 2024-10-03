@@ -52,7 +52,7 @@ void LCD595::begin()
 
     command(0x28); // thiet lap giao thuc voi LCD dung 4bit, lcd 2dong, do phan giai 5x8
     command(0x0C); // an con tro
-    Clear();       // Xoa lcd
+    clear();       // Xoa lcd
     command(0x06); // ky tu in sau se dung sau ky tu in truoc
     command(0x80); // dua LCD vi tri dong dau tien
 }
@@ -68,12 +68,12 @@ void LCD595::begin(uint8_t cols, uint8_t rows)
 
     command(0x28); // thiet lap giao thuc voi LCD dung 4bit, lcd 2dong, do phan giai 5x8
     command(0x0C); // an con tro
-    Clear();       // Xoa lcd
+    clear();       // Xoa lcd
     command(0x06); // ky tu in sau se dung sau ky tu in truoc
     command(0x80); // dua LCD vi tri dong dau tien
 }
 
-void LCD595::Clear(void)
+void LCD595::clear(void)
 {
     command(0x1);
     delayMicroseconds(2000);
@@ -92,7 +92,7 @@ void LCD595::home()
     delayMicroseconds(2000); // this command takes a long time!
 }
 
-void LCD595::CustomChar(uint8_t location, uint8_t *byteArr)
+void LCD595::customChar(uint8_t location, uint8_t *byteArr)
 {
     if (location < 8)
     {
@@ -102,19 +102,19 @@ void LCD595::CustomChar(uint8_t location, uint8_t *byteArr)
     }
 }
 
-void LCD595::PrintCustomChar(uint8_t m)
+void LCD595::printCustomChar(uint8_t m)
 {
     if (m < 8)
         write(m);
 }
 
-void LCD595::BacklightOn(void)
+void LCD595::backlightOn(void)
 {
     _backlightVal = LCD_BACKLIGHT;
     sendByte(_backlightVal);
 }
 
-void LCD595::BacklightOff(void)
+void LCD595::backlightOff(void)
 {
     _backlightVal = LCD_NOBACKLIGHT;
     sendByte(_backlightVal);

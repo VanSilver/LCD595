@@ -1,0 +1,21 @@
+###########################################
+# Datatypes (KEYWORD1)
+###########################################
+
+LCD595	KEYWORD1
+
+###########################################
+# Methods and Functions (KEYWORD2)
+###########################################
+init			KEYWORD2
+begin			KEYWORD2
+clear			KEYWORD2
+home			KEYWORD2
+scrollDisplayLeft	KEYWORD2
+scrollDisplayRight	KEYWORD2
+BacklightOn		KEYWORD2
+BacklightOff		KEYWORD2
+customChar		KEYWORD2
+setCursor		KEYWORD2
+print			KEYWORD2
+printCustomChar		KEYWORD2

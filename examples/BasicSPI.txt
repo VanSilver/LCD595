@@ -1,8 +1,8 @@
-
+// coppy all and paste to main.cpp for test
 #include "Arduino.h"
 #include "LCD595.h"
 
-// tao dia chi o nho toi cac ky tu dat biet
+// address default sympol
 char Degree_symbol[8] = {0xDF};
 char Ohm_symbol[8] = {0xF4};
 char Alpha_symbol[8] = {0xE0};
