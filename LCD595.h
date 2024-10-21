@@ -29,7 +29,6 @@
  *                                              D7 -------------------------------------------------+  |  |
  *                                              A  ----------------------------------------------------+  |
  *                                              K  -------------------------------------------------------+                        
-
  * 
  *  You can connection any MCU to Module using Arduino Framework   
  *  DATApin, CLKpin, LATCHpin this is pin for USER DEFINE for MCU
