@@ -16,7 +16,7 @@ unsigned char Add_sub[8] = {0x04, 0x04, 0x1F, 0x04, 0x04, 0x00, 0x1F, 0x00};
 
 // const uint8_t clk = 18;
 // const uint8_t data = 23;
-const uint8_t latch = 15; //define only latch pin for SPI mode
+const uint8_t latch = 15; //define only latch pin for VSPI mode
 
 LCD595 lcd(latch);
 
