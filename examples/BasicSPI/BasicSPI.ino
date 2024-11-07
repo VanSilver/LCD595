@@ -59,7 +59,7 @@ void setup()
 {
   Serial.begin(9600);
   lcd.begin();
-  lcd.CustomChar(0, Add_sub);
+  lcd.customChar(0, Add_sub);
 }
 
 void loop()
@@ -68,8 +68,8 @@ void loop()
   lcd.print("LCD595-VANSILVER");
   lcd.setCursor(1, 2);
   lcd.print("SPI MODE ");
-  lcd.PrintCustomChar(0);
+  lcd.printCustomChar(0);
   lcd.print(123);
   delay(1000);
-  lcd.Clear();
+  lcd.clear();
 }

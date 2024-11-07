@@ -57,7 +57,7 @@ LCD595 lcd(clk, data, latch);
 void setup()
 {
   lcd.begin(16, 2);
-  lcd.CustomChar(0, Add_sub);
+  lcd.customChar(0, Add_sub);
 }
 
 void loop()
@@ -65,6 +65,6 @@ void loop()
   lcd.setCursor(1, 1);
   lcd.print("LCD595-VANSILVER");
   lcd.setCursor(1, 2);
-  lcd.PrintCustomChar(0);
+  lcd.printCustomChar(0);
   lcd.print(123);
 }
