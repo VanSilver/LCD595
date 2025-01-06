@@ -6,6 +6,8 @@ Can be controlled via software SPI or hardware SPI
 
 ![](https://github.com/VanSilver/LCD595/blob/main/ModuleLCD595.jpg)
 
+![](https://github.com/VanSilver/LCD595/blob/main/Install_Lib_Arduino.jpg)
+
  *   Contact for buy Module LCD595:
  *   https://www.youtube.com/@vansilver1711
  *   https://facebook.com/VanSilver.ytb
